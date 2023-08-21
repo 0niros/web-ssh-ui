@@ -1,0 +1,33 @@
+.layout-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #f0f0f0;
+
+  .navi-layout {
+    width: 50%;
+    height: 5%;
+    top: 5%;
+    left: 25%;
+    position: absolute;
+  }
+
+  .content {
+    width: 100%;
+    height: 85%;
+    top: 12%;
+    position: absolute;
+  }
+
+  .icon {
+    width: 80%;
+    top: 40%;
+    left: 5%;
+    position: absolute;
+    font-size: 60px;
+    color: slateblue;
+  }
+
+}

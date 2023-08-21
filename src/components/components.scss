@@ -1,0 +1,145 @@
+.component-container {
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  .row {
+    width: 100%;
+    height: 100%;
+  }
+
+  .component-img {
+    width: 45%;
+    height: auto;
+    display: compact;
+    margin: 15% auto 20px;
+  }
+
+  .config-form {
+    width: 65%;
+    height: 65%;
+    display: compact;
+    margin: 40% auto 20px;
+  }
+
+  .right-col {
+    border-left: #00d5d8;
+    height: 100%;
+    border-left-width: 2px;
+    border-left-style: groove;
+    background: rgb(255 255 251);
+  }
+
+  .file-manager {
+    width: 100%;
+    top: 10%;
+    height: 90%;
+  }
+
+}
+
+.terminal {
+  background-color: #282c34;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  position: absolute;
+
+  .xterm-screen {
+    width: 100%;
+    position: absolute;
+  }
+
+}
+
+.file-item {
+  border-color: #C3E7FE;
+  border-radius:10px  ;
+  border-style: groove;
+  border-width: 2px;
+  width: 100%;
+  height: 40px;
+  background: #E8F7FF;
+
+  .file-icon {
+    font-size: 20px;
+    position: relative ;
+    top: 25%;
+    left: 5%;
+    color: #00d5d8;
+  }
+
+  .ratio {
+    position: relative;
+    top: 20%;
+    left: 3%;
+  }
+
+  .file-name {
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    top: 25%;
+    width: 80%;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .dir-name {
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    top: 25%;
+    width: 80%;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: #00d5d8;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    color: #00d5d8;
+  }
+
+  .file-size {
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    top: 0%;
+    left: 0%;
+    width: 90%;
+    font-size: 10px;
+    font-weight: bold;
+    color: darkgrey;
+  }
+
+  #svg {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.path-span {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.drawer {
+  width: 500px;
+}
+
+.back-button {
+  left: 50%;
+  position: relative;
+  background: #C3E7FE;
+}
+
+.path-block {
+  width: 100%;
+  height: 50px;
+}
