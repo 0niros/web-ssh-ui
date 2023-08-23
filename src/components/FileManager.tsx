@@ -139,7 +139,7 @@ const FileManager = () => {
 
     return (
         <div>
-            <Button onClick={openFileManager}>File Manager</Button>
+            <Button type="primary" onClick={openFileManager}>File Manager</Button>
             <Drawer open={open} placement="right" width={500} onClose={closeFileManager}>
                 <div className="file-manager">
                     <Button icon={<UploadOutlined />} onClick={upload}>Upload</Button>

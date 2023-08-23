@@ -3,7 +3,7 @@ import React, {useEffect, useState} from "react";
 import "./index.scss"
 import {SshConfiguration} from "../../components/SshConfiguration";
 import {Outlet, useLocation, useNavigate} from "react-router-dom";
-import {LeftOutlined, RightOutlined} from "@ant-design/icons";
+import {GithubOutlined, LeftOutlined, RightOutlined} from "@ant-design/icons";
 import {getToken} from "../../utils/http";
 
 class StepItem {
@@ -65,6 +65,9 @@ const Layout: React.FC = () => {
     return (
         <div className="layout-container">
             <Steps current={current} items={items} className="navi-layout"/>
+            <a href="https://github.com/0nion-knight/web-ssh-server" className="layout-icon">
+                <GithubOutlined />
+            </a>
             <Row className="content">
                 <Col span={2}>
                     {current > 0 && current <= steps.length - 1 && (

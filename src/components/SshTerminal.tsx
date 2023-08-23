@@ -3,11 +3,10 @@ import {FitAddon} from  'xterm-addon-fit'
 import 'xterm/css/xterm.css'
 import './components.scss'
 import React, {useEffect} from "react";
-import {message} from "antd";
+import {Col, message, Row, Tag} from "antd";
 import {useLocation, useNavigate} from "react-router-dom";
 import {SshConfig} from "./SshConfiguration";
 import {FileManager} from "./FileManager";
-
 const SshTerminal = () => {
     const term: Terminal = new Terminal({
         // windowsMode: true,
@@ -73,8 +72,15 @@ const SshTerminal = () => {
 
     return (
         <>
-            <div ref={terminalRef} className="terminal"></div>
-            <FileManager />
+            <div className="terminal-content">
+                <div ref={terminalRef} className="terminal"></div>
+            </div>
+            <Row className="terminal-footer">
+                    <Col span={6}><FileManager /></Col>
+                    <Col span={6}><Tag className="footer-span" color="#2db7f5">Host: {config.address} </Tag></Col>
+                    <Col span={6}><Tag className="footer-span" color="#2db7f5">Port: {config.port} </Tag></Col>
+                    <Col span={6}><Tag className="footer-span" color="#2db7f5">User: {config.hostname} </Tag></Col>
+            </Row>
         </>
     )
 }
