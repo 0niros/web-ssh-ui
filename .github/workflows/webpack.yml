@@ -33,5 +33,5 @@ jobs:
       env:
         REPO: git@github.com:0nion-knight/web-ssh-publish.git
         BRANCH: master
-        FOLDER: build
+        FOLDER: build.tar
         SSH_PRIVATE_KEY: ${{ secrets.ACTION_DEPLOY_SECRET }}
