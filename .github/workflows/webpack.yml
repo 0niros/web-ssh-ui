@@ -26,3 +26,11 @@ jobs:
       run: |
         yarn install
         yarn run build
+        
+    - name: Publish
+      uses: s0/git-publish-subdir-action@develop
+      env:
+        REPO: git@github.com:0nion-knight/web-ssh-publish.git
+        BRANCH: master
+        FOLDER: build
+        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
