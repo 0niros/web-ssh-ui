@@ -75,7 +75,7 @@ const SshConfiguration = () => {
                             <Form.Item
                                 label="Password"
                                 name="password"
-                                rules={[{ required: true, message: 'Please input password.' }]}
+                                rules={[{ message: 'Please input password.' }]}
                             >
                                 <Input.Password/>
                             </Form.Item>

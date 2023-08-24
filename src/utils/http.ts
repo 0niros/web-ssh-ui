@@ -36,8 +36,7 @@ const setToken = (t: string)=> {
 }
 
 const getServerAddressAndPort = () => {
-    // return window.location.host;
-    return "127.0.0.1:8888"
+    return window.location.host;
 }
 
 const getServerProtocol = () => {
