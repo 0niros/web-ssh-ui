@@ -16,7 +16,7 @@ const downloadRemote = (props: DownloadProps) => {
         const fileName: string = window.decodeURI(fileNameHeader?.split("=")[1])
         const url = window.URL.createObjectURL(
             new Blob([res.data], {
-                type: "text/plain",
+                type: "application/octet-stream",
             }),
         )
         const link = document.createElement('a')
