@@ -53,16 +53,16 @@ const SshTerminal = () => {
         term.writeln("Connection closed.")
     }
 
-    term.onData(data => {
-        ws.send(data)
-    })
-
     term.onKey(e => {
-        if (e.domEvent.key === "Enter") {
-            e.key = "\n"
-        } else if (e.domEvent.key === "Backspace") {
-            e.key = "\b\b"
+        let data: string = e.key
+        switch (e.domEvent.key) {
+            case "Enter": data = "\n"; break
+            case "Tab": data = "\t"; break
+            case "Backspace": data = "\b\b"; break
+            case "Esc": data = "\x9b"; break
         }
+
+        ws.send(data)
     })
 
     useEffect(() => {
