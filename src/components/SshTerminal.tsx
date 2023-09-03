@@ -58,8 +58,7 @@ const SshTerminal = () => {
         switch (e.domEvent.key) {
             case "Enter": data = "\n"; break
             case "Tab": data = "\t"; break
-            case "Backspace": data = "\b\b"; break
-            case "Esc": data = "\x9b"; break
+            case "Backspace": data = "\b"; break
         }
 
         ws.send(data)
