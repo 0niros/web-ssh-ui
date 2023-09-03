@@ -54,8 +54,15 @@ const SshTerminal = () => {
     }
 
     term.onData(data => {
-        console.log(term.cols, term.rows)
         ws.send(data)
+    })
+
+    term.onKey(e => {
+        if (e.domEvent.key === "Enter") {
+            e.key = "\n"
+        } else if (e.domEvent.key === "Backspace") {
+            e.key = "\b\b"
+        }
     })
 
     useEffect(() => {
