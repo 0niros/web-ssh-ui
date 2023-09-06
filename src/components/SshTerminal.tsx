@@ -60,7 +60,7 @@ const SshTerminal = () => {
             case "Tab": data = "\t"; break
             case "Backspace": data = "\b"; break
         }
-        term.write(data)
+    
         ws.send(data)
     })
 
