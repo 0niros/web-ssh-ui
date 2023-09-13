@@ -58,10 +58,10 @@ const SshTerminal = () => {
 
     term.onKey(e => {
         let data: string = e.key
-        switch (e.domEvent.key) {
-            case "Enter": data = "\n"; break
-            case "Tab": data = "\t"; break
-            case "Backspace": data = "\b"; break
+        if (e.domEvent.ctrlKey && e.domEvent.key === "KeyV") {
+            navigator.clipboard.readText().then(text => {
+                ws.send(text)
+            })
         }
     
         ws.send(data)
