@@ -14,8 +14,7 @@ const SshTerminal = () => {
         convertEol: true,
         disableStdin: false,
         cursorBlink: true,
-        scrollback: 15000,
-        fontFamily: "CascadiaCode",
+        scrollback: 500000,
         fontSize: 14,
         theme: {
             foreground: "#ECECEC",
